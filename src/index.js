@@ -35,13 +35,15 @@ function gettemp() {
     .then((data) => {
       // get temp
 
-      temp.textContent = data.current.temperature_2m + "°C";
+      temp.textContent = data.current.temperature_2m;
 
       // get wind speed
 
       windspd.textContent = data.current.wind_speed_10m;
 
       // get humiyttaiy
+
+      hummity.textContent = data.current.relative_humidity_2m;
     })
     .catch((err) => {
       temp.textContent = err;
