@@ -6,6 +6,8 @@ let time = document.getElementById("time");
 
 let windspd = document.getElementById("windspeed");
 
+let hummity = document.getElementById("hummity");
+
 // temp fetch
 
 let lat = undefined;
