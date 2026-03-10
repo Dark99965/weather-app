@@ -16,8 +16,11 @@ navigator.geolocation.getCurrentPosition((pos) => {
 });
 
 function gettemp() {
+  /* 
+      TODO: aput windo speed and humity 
+    */
   fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${longitude}&current=temperature_2m`,
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${longitude}&current=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&forecast_days=1`,
   )
     .then((re) => re.json())
     .then((data) => {
