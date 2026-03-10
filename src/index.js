@@ -2,6 +2,7 @@
 
 let temp = document.getElementById('temp');
 
+let time = document.getElementById('time')
 
 // temp fetch
 
@@ -17,4 +18,16 @@ function gettemp() {
 }
 gettemp()
 
+
 setInterval(gettemp, 40000);
+
+// time
+
+let date = new Date()
+
+function gettime() {
+    const date = new Date()
+    time.textContent = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() 
+}
+gettime()
+setInterval(gettime, 1000)
