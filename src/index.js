@@ -5,7 +5,11 @@ let temp = document.getElementById('temp');
 
 // temp fetch
 
-fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m')
-    .then(respnse => respnse.json())
-    .then(data => console.log(data.current.temperature_2m))
+setInterval(() => {
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m')
+        .then(respnsse => respnsse.json())
+        .then(data => {
+            temp.textContent = data.current.temperature_2m + "C"
+        }, 2000)
+})
     
