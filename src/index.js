@@ -38,6 +38,8 @@ function gettemp() {
       // get wind speed
 
       windspd.textContent = data.current.wind_speed_10m;
+
+      // get humiyttaiy
     })
     .catch((err) => {
       temp.textContent = err;
