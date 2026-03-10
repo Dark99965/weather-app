@@ -31,7 +31,13 @@ function gettemp() {
   )
     .then((re) => re.json())
     .then((data) => {
+      // get temp
+
       temp.textContent = data.current.temperature_2m + "°C";
+
+      // get wind speed
+
+      windspd.textContent = data.current.wind_speed_10m;
     })
     .catch((err) => {
       temp.textContent = err;
