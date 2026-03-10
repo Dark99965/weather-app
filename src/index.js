@@ -26,7 +26,34 @@ navigator.geolocation.getCurrentPosition((pos) => {
 
 function gettemp() {
   /* 
-      TODO: aput windo speed and humity 
+      TODO: whther code
+      
+      *0-49: General State
+
+      * 0-3: Clear, partly cloudy, or overcast
+      * 10-19: Mist, smoke, or haze
+      * 20-29: Precipitation, fog, or thunderstorm in the last hour
+      * 30-39: Duststorm, sandstorm, or blowing snow
+
+ * 50-69: Drizzle and Rain
+
+      * 51, 53, 55: Light, moderate, dense drizzle
+      * 56, 57: Freezing drizzle (light/dense)
+      * 61, 63, 65: Slight, moderate, heavy rain
+      * 66, 67: Freezing rain (light/heavy)
+
+  * 70-79: Snow and Ice
+
+     *  71, 73, 75: Slight, moderate, heavy snow
+     *  77: Snow grains
+     *  85, 86: Snow showers
+
+ *  80-99: Showers and Thunderstorms
+
+      80, 81, 82: Rain showers (slight/moderate/violent)
+      95: Thunderstorm (slight/moderate)
+      96, 99: Thunderstorm with slight/heavy hail
+    
   */
   fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${longitude}&current=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&forecast_days=1`,
